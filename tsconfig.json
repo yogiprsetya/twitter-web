@@ -8,6 +8,12 @@
     },
     {
       "path": "./apps/twitter-web"
+    },
+    {
+      "path": "./packages/x-desktop"
+    },
+    {
+      "path": "./packages/ui"
     }
   ]
 }
