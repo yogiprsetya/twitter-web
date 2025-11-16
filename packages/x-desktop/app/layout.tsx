@@ -1,3 +1,4 @@
+import '@twitter-web/ui/styles.css';
 import './global.css';
 
 export const metadata = {

@@ -4,12 +4,6 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/twitter-web-e2e"
-    },
-    {
-      "path": "./apps/twitter-web"
-    },
-    {
       "path": "./packages/x-desktop"
     },
     {

@@ -23,13 +23,12 @@
     "rootDir": "."
   },
   "include": [
-    "app/**/*.ts",
-    "app/**/*.tsx",
     "app/**/*.js",
     "app/**/*.jsx",
-    "../../packages/x-desktop/.next/types/**/*.ts",
-    "../../dist/packages/x-desktop/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "out-tsc",
@@ -43,5 +42,10 @@
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"
+  ],
+  "references": [
+    {
+      "path": "../ui"
+    }
   ]
 }
