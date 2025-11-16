@@ -1,1 +1,62 @@
 @import "tailwindcss";
+
+@theme {
+  --color-twitter-slate-100: '#555A64';
+  --color-twitter-white-100: '#FFF';
+  --color-twitter-grey-100: '#CBD0D9';
+  --color-twitter-black-100: '#000000';
+  --color-twitter-blue-100: '#4A98E9';
+  --color-twitter-charcoal-100: '#3A3D45';
+  --color-twitter-title-display: 'var(--color-twitter-white-100)';
+}
+
+@font-face {
+  font-family: "TwitterChirp";
+  src: url("/fonts/Chirp-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TwitterChirp";
+  src: url("/fonts/Chirp-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TwitterChirp";
+  src: url("./fonts/Chirp-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TwitterChirp";
+  src: url("./fonts/Chirp-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TwitterChirp";
+  src: url("./fonts/Chirp-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
