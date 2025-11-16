@@ -1,0 +1,23 @@
+import { IconProps } from './types';
+
+export const RetweetIcon = ({ size = 16, className, ...props }: IconProps) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      {...props}
+    >
+      <path
+        d="M3.34734 4V11.7264C3.34734 12.517 3.98829 13.158 4.77894 13.158H9.78952M3.34734 4L1.19995 6.14739M3.34734 4L5.49473 6.14739M12.6527 13.158V4.43159C12.6527 3.64095 12.0118 3 11.2211 3H6.21053M12.6527 13.158L14.8001 11.0106M12.6527 13.158L10.5053 11.0106"
+        stroke="currentColor"
+        strokeWidth="0.8"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+

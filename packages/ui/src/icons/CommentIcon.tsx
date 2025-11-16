@@ -1,0 +1,22 @@
+import { IconProps } from './types';
+
+export const CommentIcon = ({ size = 16, className, ...props }: IconProps) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      {...props}
+    >
+      <path
+        d="M6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11H7V14C9.86959 12.0869 15 10.0587 15 6C15 3.23858 12.7614 1 10 1H6Z"
+        stroke="currentColor"
+        strokeWidth="0.8"
+      />
+    </svg>
+  );
+};
+
