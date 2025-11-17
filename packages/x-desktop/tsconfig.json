@@ -17,16 +17,15 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "~/*": ["./*"]
     },
     "outDir": "dist",
     "rootDir": "."
   },
   "include": [
-    "app/**/*.js",
-    "app/**/*.jsx",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "components/**/*.tsx",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
@@ -42,5 +41,10 @@
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"
+  ],
+  "references": [
+    {
+      "path": "../ui"
+    }
   ]
 }

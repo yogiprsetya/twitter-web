@@ -1,26 +1,27 @@
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '~/lib/utils';
+import { cn } from '../lib/utils';
 
 const buttonVariants = cva(
   cn([
-    'inline-flex items-center justify-center gap-2 shrink-0 [&_svg]:shrink-0',
+    'flex items-center justify-center gap-2 shrink-0 [&_svg]:shrink-0',
     'disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none',
     'whitespace-nowrap rounded-full font-bold transition-all outline-none',
   ]),
   {
     variants: {
       variant: {
-        default: 'bg-twitter-white-100 border-bg-twitter-white-100',
+        primary: 'bg-primary-blue border-primary-blue text-white',
+        secondary: 'bg-white border-primary-blue text-primary-blue',
       },
       size: {
         sm: 'h-8 text-[14px]/[16px] px-4 has-[>svg]:px-2.5',
-        xl: 'h-[52px] text-[17px]/[20px] px-8 has-[>svg]:px-4',
+        big: 'h-12 text-[15px]/[18px] px-8',
       },
     },
     defaultVariants: {
-      variant: 'default',
+      variant: 'primary',
       size: 'sm',
     },
   },

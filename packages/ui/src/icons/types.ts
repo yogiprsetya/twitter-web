@@ -1,7 +1,3 @@
-import { SVGProps } from 'react';
-
-export interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'width' | 'height'> {
-  size?: number;
+export interface IconProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }
-
