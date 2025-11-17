@@ -1,4 +1,4 @@
-export default function Index() {
+export default function Feed() {
   /*
    * Replace the elements below with your own.
    *

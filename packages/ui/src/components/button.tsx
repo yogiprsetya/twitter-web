@@ -16,13 +16,13 @@ const buttonVariants = cva(
         secondary: 'bg-white border-primary-blue text-primary-blue',
       },
       size: {
-        sm: 'h-8 text-[14px]/[16px] px-4 has-[>svg]:px-2.5',
-        big: 'h-12 text-[15px]/[18px] px-8',
+        med: 'h-10 text-[15px]/[19px] px-4 py-2.5',
+        big: 'h-12 text-[15px]/[19px] px-8 py-[15px]',
       },
     },
     defaultVariants: {
       variant: 'primary',
-      size: 'sm',
+      size: 'med',
     },
   },
 );
