@@ -1,4 +1,5 @@
 import { TopTweetIcon } from '@twitter-web/ui';
+import { Searchbar } from '~/components/searchbar';
 import { TweetCompose } from '~/components/tweet-compose';
 
 export default function Feed() {
@@ -18,6 +19,10 @@ export default function Feed() {
         <TweetCompose />
 
         <div className="h-2 bg-dark-2 border-b" />
+      </div>
+
+      <div className="pt-3">
+        <Searchbar />
       </div>
     </div>
   );
