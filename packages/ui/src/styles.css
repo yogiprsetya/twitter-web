@@ -2,6 +2,7 @@
 
 @source "./components/*.tsx";
 @source "./icons/*.tsx";
+@source "./layouts/*.tsx";
 
 @theme {
   --color-black: #0f1419;
@@ -70,4 +71,12 @@
 
 body {
   font-family: 'TwitterChirp', sans-serif;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply dark:border-dark-4;
+  }
 }

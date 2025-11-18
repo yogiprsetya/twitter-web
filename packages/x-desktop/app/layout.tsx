@@ -1,4 +1,5 @@
 import '@twitter-web/ui/styles.css';
+import { ThemeProvider } from '@twitter-web/ui';
 import { Sidebar } from '~/components/sidebar';
 
 export const metadata = {
@@ -12,17 +13,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="bg-white text-black dark:bg-dark-1 dark:text-white min-h-screen">
-        <div className="flex max-w-7xl justify-between mx-auto min-h-screen">
-          <header className="max-h-screen overflow-y-scroll sticky top-0">
-            <Sidebar />
-          </header>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex max-w-7xl justify-between mx-auto min-h-screen">
+            <header className="max-h-screen overflow-y-scroll sticky top-0">
+              <Sidebar />
+            </header>
 
-          <main className="max-h-screen flex justify-start grow border-l border-dark-4">
-            {children}
-          </main>
-        </div>
+            <main className="max-h-screen flex justify-start grow">
+              {children}
+            </main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
