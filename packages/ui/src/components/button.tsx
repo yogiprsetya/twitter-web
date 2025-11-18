@@ -7,17 +7,19 @@ const buttonVariants = cva(
   cn([
     'flex items-center justify-center gap-2 shrink-0 [&_svg]:shrink-0',
     'disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none',
-    'whitespace-nowrap rounded-full font-bold transition-all outline-none',
+    'whitespace-nowrap rounded-full border transition-all outline-none',
+    'font-bold text-[15px]/[19px]',
   ]),
   {
     variants: {
       variant: {
         primary: 'bg-primary-blue border-primary-blue text-white',
-        secondary: 'bg-white border-primary-blue text-primary-blue',
+        secondary: 'bg-transparent border-primary-blue text-primary-blue',
       },
       size: {
-        med: 'h-10 text-[15px]/[19px] px-4 py-2.5',
-        big: 'h-12 text-[15px]/[19px] px-8 py-[15px]',
+        small: 'h-[30px] px-3 py-2',
+        med: 'h-10 px-4 py-2.5',
+        big: 'h-12 px-8 py-[15px]',
       },
     },
     defaultVariants: {

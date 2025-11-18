@@ -22,11 +22,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="flex max-w-7xl justify-between mx-auto min-h-screen">
-            <header className="max-h-screen overflow-y-scroll sticky top-0">
+            <header className="max-h-screen max-w-fit overflow-y-scroll sticky top-0">
               <Sidebar />
             </header>
 
-            <main className="max-h-screen flex justify-start grow">
+            <main className="max-h-screen flex-1 flex justify-start grow">
               {children}
             </main>
           </div>

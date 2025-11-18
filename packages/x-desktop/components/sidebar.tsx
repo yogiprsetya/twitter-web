@@ -72,7 +72,7 @@ const NAV = [
 
 export const Sidebar = () => {
   return (
-    <aside style={{ width: 262 }} className="h-full mr-8">
+    <aside style={{ width: 275 }} className="h-full pr-8">
       <div className="overflow-hidden size-[52px] rounded-full flex items-center justify-center">
         <LogoX className="fill-primary-blue dark:fill-white size-8" />
       </div>
