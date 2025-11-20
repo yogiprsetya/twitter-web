@@ -1,10 +1,15 @@
 import { Avatar, AvatarImage, AvatarFallback, Button } from '@twitter-web/ui';
+import { FC } from 'react';
 
-export const WhoToFollow = () => {
+type Props = {
+  title?: string;
+};
+
+export const WhoToFollow: FC<Props> = ({ title = 'Who to follow' }) => {
   return (
     <div className="rounded-2xl bg-dark-2 overflow-hidden">
       <header className="px-4 py-3 border-b">
-        <h2 className="font-bold text-xl">Who to follow</h2>
+        <h2 className="font-bold text-xl">{title}</h2>
       </header>
 
       <div className="flex flex-col px-4">

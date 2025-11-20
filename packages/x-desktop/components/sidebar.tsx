@@ -25,7 +25,7 @@ export const Sidebar = () => {
 
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Avatar className="size-12">
+          <Avatar className="size-10">
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>YP</AvatarFallback>
           </Avatar>

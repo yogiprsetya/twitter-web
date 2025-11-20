@@ -74,13 +74,13 @@ export const SidebarMenu = () => {
       {NAV.map((v) => (
         <a
           key={v.label}
-          className="[&_svg]:size-6 flex items-center gap-5 h-14 px-3"
+          className="[&_svg]:size-6 flex items-center gap-5 h-13 px-3"
         >
           {v.icon.default} <span className="font-bold text-lg">{v.label}</span>
         </a>
       ))}
 
-      <button type="button" className="flex items-center gap-5 h-14 px-3 mb-6">
+      <button type="button" className="flex items-center gap-5 h-14 px-3 mb-4">
         <MoreIcon className="size-6 " />{' '}
         <span className="font-bold text-lg">More</span>
       </button>

@@ -3,5 +3,7 @@ export * from './icons';
 
 export * from './components/avatar';
 export * from './components/button';
+export * from './components/skeleton';
+export * from './components/tabs';
 
 export * from './layouts/theme-provider';
