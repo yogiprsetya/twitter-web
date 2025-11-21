@@ -1,6 +1,5 @@
 import '@twitter-web/ui/styles.css';
 import { ThemeProvider } from '@twitter-web/ui';
-import { Sidebar } from '~/components/sidebar';
 
 export const metadata = {
   title: 'Welcome to x-desktop',
@@ -21,15 +20,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex max-w-7xl justify-between mx-auto min-h-screen">
-            <header className="max-h-screen max-w-fit overflow-y-scroll sticky top-0">
-              <Sidebar />
-            </header>
-
-            <main className="max-h-screen flex-1 flex justify-start grow">
-              {children}
-            </main>
-          </div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
