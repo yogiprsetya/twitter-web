@@ -5,7 +5,6 @@ export default [
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
   {
-    extends: ['@nx/eslint/preset'],
     ignores: [
       '**/dist',
       '**/vite.config.*.timestamp*',
