@@ -17,31 +17,27 @@ const SignInPage = () => {
   return (
     <div className="w-full max-w-md p-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Masuk ke X</h1>
+        <h1 className="text-3xl font-bold mb-2">Masuk ke Twitter</h1>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <Input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
+      <form onSubmit={handleSubmit} className="space-y-4 *:w-full">
+        <Input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
 
-        <div>
-          <Input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
+        <Input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
 
-        <Button type="submit" size="big" className="w-full">
+        <Button type="submit" size="big">
           Masuk
         </Button>
       </form>

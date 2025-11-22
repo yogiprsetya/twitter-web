@@ -10,24 +10,16 @@ const SignUpPage = () => {
         <h1 className="text-3xl font-bold mb-2">Buat akun Anda</h1>
       </div>
 
-      <form className="space-y-4">
-        <div>
-          <Input type="text" placeholder="Nama" required />
-        </div>
+      <form className="space-y-4 *:w-full">
+        <Input type="text" placeholder="Nama" required />
 
-        <div>
-          <Input type="email" placeholder="Email" required />
-        </div>
+        <Input type="email" placeholder="Email" required />
 
-        <div>
-          <Input type="password" placeholder="Password" required />
-        </div>
+        <Input type="password" placeholder="Password" required />
 
-        <div>
-          <Input type="password" placeholder="Konfirmasi Password" required />
-        </div>
+        <Input type="password" placeholder="Konfirmasi Password" required />
 
-        <Button type="submit" size="big" className="w-full">
+        <Button type="submit" size="big">
           Daftar
         </Button>
       </form>

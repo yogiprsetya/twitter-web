@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Masuk ke X',
-  description: 'Masuk atau daftar ke X',
+  title: 'Masuk ke Twitter',
+  description: 'Masuk atau daftar ke Twitter',
 };
 
 export default function AuthLayout({
@@ -14,4 +14,3 @@ export default function AuthLayout({
     </div>
   );
 }
-
