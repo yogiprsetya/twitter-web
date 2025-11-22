@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Input } from '@twitter-web/ui';
+import { Button, Input, InputPassword } from '@twitter-web/ui';
 import Link from 'next/link';
 
 const SignUpPage = () => {
@@ -15,9 +15,9 @@ const SignUpPage = () => {
 
         <Input type="email" placeholder="Email" required />
 
-        <Input type="password" placeholder="Password" required />
+        <InputPassword placeholder="Password" required />
 
-        <Input type="password" placeholder="Konfirmasi Password" required />
+        <InputPassword placeholder="Konfirmasi Password" required />
 
         <Button type="submit" size="big">
           Daftar

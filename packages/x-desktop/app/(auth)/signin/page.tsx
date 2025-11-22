@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Input } from '@twitter-web/ui';
+import { Button, Input, InputPassword } from '@twitter-web/ui';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -29,8 +29,7 @@ const SignInPage = () => {
           required
         />
 
-        <Input
-          type="password"
+        <InputPassword
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
