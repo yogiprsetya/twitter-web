@@ -24,7 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-w-[768px] mx-auto min-h-screen">{children}</div>
+          <div className="max-w-md mx-auto min-h-screen">{children}</div>
         </ThemeProvider>
       </body>
     </html>

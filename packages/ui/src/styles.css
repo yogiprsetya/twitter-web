@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+@source "./app/*.tsx";
 @source "./components/*.tsx";
 @source "./icons/*.tsx";
 @source "./layouts/*.tsx";
