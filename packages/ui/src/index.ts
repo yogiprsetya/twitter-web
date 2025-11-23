@@ -8,4 +8,5 @@ export * from './components/input';
 export * from './components/skeleton';
 export * from './components/tabs';
 
+export * from './layouts/navigation-menu';
 export * from './layouts/theme-provider';

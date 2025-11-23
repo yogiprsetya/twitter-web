@@ -4,9 +4,10 @@ import {
   AvatarImage,
   Button,
   EllipsesIcon,
+  MoreIcon,
+  SIDEBAR_MENU,
 } from '@twitter-web/ui';
 import LogoX from '~/public/logo-x.svg';
-import { SidebarMenu } from './sidebar-menu';
 
 export const Sidebar = () => {
   return (
@@ -16,7 +17,23 @@ export const Sidebar = () => {
       </div>
 
       <nav className="mt-1 mb-10">
-        <SidebarMenu />
+        {SIDEBAR_MENU.map((v) => (
+          <a
+            key={v.label}
+            className="[&_svg]:size-6 flex items-center gap-5 h-13 px-3"
+          >
+            {v.icon.default}{' '}
+            <span className="font-bold text-lg">{v.label}</span>
+          </a>
+        ))}
+
+        <button
+          type="button"
+          className="flex items-center gap-5 h-14 px-3 mb-4"
+        >
+          <MoreIcon className="size-6 " />{' '}
+          <span className="font-bold text-lg">More</span>
+        </button>
 
         <Button size="big" className="w-full">
           Tweet

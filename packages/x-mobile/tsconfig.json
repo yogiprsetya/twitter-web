@@ -17,18 +17,17 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "~/*": ["./*"]
     },
     "outDir": "dist",
     "rootDir": "."
   },
   "include": [
-    "../../dist/packages/x-mobile/.next/types/**/*.ts",
-    "../../packages/x-mobile/.next/types/**/*.ts",
     "app/**/*.js",
     "app/**/*.jsx",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "components/**/*.tsx",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],

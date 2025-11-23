@@ -13,12 +13,12 @@ import {
   ListsIconSelected,
   ProfileIconDefault,
   ProfileIconSelected,
-  MoreIcon,
-} from '@twitter-web/ui';
+} from '../icons';
 
-const NAV = [
+export const SIDEBAR_MENU = [
   {
     label: 'Home',
+    href: '/',
     icon: {
       default: <HomeIconDefault />,
       selected: <HomeIconSelected />,
@@ -26,6 +26,7 @@ const NAV = [
   },
   {
     label: 'Explore',
+    link: '/explore',
     icon: {
       default: <ExploreIconDefault />,
       selected: <ExploreIconSelected />,
@@ -33,6 +34,7 @@ const NAV = [
   },
   {
     label: 'Notification',
+    link: '/notification',
     icon: {
       default: <NotificationsIconDefault />,
       selected: <NotificationsIconSelected />,
@@ -40,6 +42,7 @@ const NAV = [
   },
   {
     label: 'Messages',
+    link: '/messages',
     icon: {
       default: <MessagesIconDefault />,
       selected: <MessagesIconSelected />,
@@ -47,6 +50,7 @@ const NAV = [
   },
   {
     label: 'Bookmarks',
+    link: '/bookmarks',
     icon: {
       default: <BookmarksIconDefault />,
       selected: <BookmarksIconSelected />,
@@ -54,6 +58,7 @@ const NAV = [
   },
   {
     label: 'Lists',
+    link: '/lists',
     icon: {
       default: <ListsIconDefault />,
       selected: <ListsIconSelected />,
@@ -61,6 +66,7 @@ const NAV = [
   },
   {
     label: 'Profile',
+    link: '/profile',
     icon: {
       default: <ProfileIconDefault />,
       selected: <ProfileIconSelected />,
@@ -68,22 +74,45 @@ const NAV = [
   },
 ];
 
-export const SidebarMenu = () => {
-  return (
-    <>
-      {NAV.map((v) => (
-        <a
-          key={v.label}
-          className="[&_svg]:size-6 flex items-center gap-5 h-13 px-3"
-        >
-          {v.icon.default} <span className="font-bold text-lg">{v.label}</span>
-        </a>
-      ))}
-
-      <button type="button" className="flex items-center gap-5 h-14 px-3 mb-4">
-        <MoreIcon className="size-6 " />{' '}
-        <span className="font-bold text-lg">More</span>
-      </button>
-    </>
-  );
-};
+export const NAVIGATION_MENU = [
+  {
+    link: '/',
+    label: 'Feeds',
+    icon: {
+      default: <HomeIconDefault />,
+      selected: <HomeIconSelected />,
+    },
+  },
+  {
+    label: 'Lists',
+    link: '/lists',
+    icon: {
+      default: <ListsIconDefault />,
+      selected: <ListsIconSelected />,
+    },
+  },
+  {
+    label: 'Explore',
+    link: '/explore',
+    icon: {
+      default: <ExploreIconDefault />,
+      selected: <ExploreIconSelected />,
+    },
+  },
+  {
+    label: 'Notification',
+    link: '/notification',
+    icon: {
+      default: <NotificationsIconDefault />,
+      selected: <NotificationsIconSelected />,
+    },
+  },
+  {
+    label: 'Messages',
+    link: '/messages',
+    icon: {
+      default: <MessagesIconDefault />,
+      selected: <MessagesIconSelected />,
+    },
+  },
+];
