@@ -18,7 +18,7 @@ import {
 export const SIDEBAR_MENU = [
   {
     label: 'Home',
-    href: '/',
+    link: '/',
     icon: {
       default: <HomeIconDefault />,
       selected: <HomeIconSelected />,
