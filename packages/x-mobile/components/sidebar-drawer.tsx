@@ -74,11 +74,13 @@ export const SidebarDrawer = ({ isOpen, onClose }: SidebarDrawerProps) => {
                 <PlusIcon className="size-4 text-white" />
               </button>
             </div>
+
             <div className="flex gap-4">
               <div>
                 <span className="font-bold text-white text-sm">188</span>
                 <span className="text-dark-6 text-sm ml-1">Following</span>
               </div>
+
               <div>
                 <span className="font-bold text-white text-sm">255</span>
                 <span className="text-dark-6 text-sm ml-1">Followers</span>
