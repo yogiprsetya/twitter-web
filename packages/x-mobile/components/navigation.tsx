@@ -2,7 +2,7 @@ import { NAVIGATION_MENU } from '@twitter-web/ui';
 
 export const Navigation = () => {
   return (
-    <div className="fixed bottom-0 w-full z-10 bg-black">
+    <div className="max-w-md fixed bottom-0 w-full z-10 bg-black">
       <nav className="flex justify-between items-center gap-2 h-16 px-6">
         {NAVIGATION_MENU.map((v) => (
           <a
