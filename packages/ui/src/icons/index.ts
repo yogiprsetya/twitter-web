@@ -1,6 +1,7 @@
 export * from './BackArrowIcon';
 export * from './BookmarksIcon';
 export * from './CalendarIcon';
+export * from './ChevronDownIcon';
 export * from './CommentIcon';
 export * from './EllipsesIcon';
 export * from './EmojiIcon';
@@ -8,6 +9,7 @@ export * from './ExploreIcon';
 export * from './EyeIcon';
 export * from './EyeOffIcon';
 export * from './GIFIcon';
+export * from './GlobeIcon';
 export * from './HomeIcon';
 export * from './LikeIcon';
 export * from './ListsIcon';

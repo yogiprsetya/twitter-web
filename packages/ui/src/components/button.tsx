@@ -15,6 +15,7 @@ const buttonVariants = cva(
       variant: {
         primary: 'bg-primary-blue border-primary-blue text-white',
         secondary: 'bg-transparent border-primary-blue text-primary-blue',
+        link: 'bg-transparent border-transparent text-primary-blue font-medium hover:underline h-auto p-0',
       },
       size: {
         small: 'h-[30px] px-3 py-2',
@@ -22,11 +23,17 @@ const buttonVariants = cva(
         big: 'h-12 px-8 py-[15px]',
       },
     },
+    compoundVariants: [
+      {
+        variant: 'link',
+        className: 'h-auto p-0',
+      },
+    ],
     defaultVariants: {
       variant: 'primary',
       size: 'med',
     },
-  },
+  }
 );
 
 function Button({

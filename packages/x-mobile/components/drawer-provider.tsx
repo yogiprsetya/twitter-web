@@ -14,10 +14,11 @@ export const DrawerProvider = ({ children }: { children: React.ReactNode }) => {
 
   const isUsernamePath =
     pathname && pathname !== '/' && /^\/[^/]+$/.test(pathname);
+  const isComposePath = pathname === '/compose';
 
   return (
     <>
-      {!isUsernamePath && <Header onMenuClick={openDrawer} />}
+      {!isUsernamePath && !isComposePath && <Header onMenuClick={openDrawer} />}
       <SidebarDrawer isOpen={isDrawerOpen} onClose={closeDrawer} />
       {children}
     </>
