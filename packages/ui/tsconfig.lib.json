@@ -29,7 +29,11 @@
     "**/*.stories.ts",
     "**/*.stories.js",
     "**/*.stories.jsx",
-    "**/*.stories.tsx"
+    "**/*.stories.tsx",
+    "vite.config.mts",
+    "vitest.config.mts",
+    "__tests__/**/*.spec.ts",
+    "__tests__/**/*.spec.tsx"
   ],
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

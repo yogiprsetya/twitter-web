@@ -1,4 +1,3 @@
-/// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
@@ -41,6 +40,18 @@ export default defineConfig(() => ({
     rollupOptions: {
       // External packages that should not be bundled into your library.
       external: ['react', 'react-dom', 'react/jsx-runtime'],
+    },
+  },
+  test: {
+    name: '@twitter-web/ui',
+    watch: false,
+    globals: true,
+    environment: 'jsdom',
+    include: ['__tests__/**/*.spec.{mjs,cjs,ts,mts,cts,tsx}'],
+    reporters: ['default'],
+    coverage: {
+      reportsDirectory: './test-output/vitest/coverage',
+      provider: 'v8',
     },
   },
 }));

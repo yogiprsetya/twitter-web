@@ -1,101 +1,160 @@
 # TwitterWeb
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+A Twitter/X clone web application built with modern web technologies. This project is a monorepo (multiple projects in one repository) that includes both desktop and mobile versions of the application, plus a shared UI component library.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+## What is this project?
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+This is a learning project that recreates the Twitter/X social media platform. It includes:
 
-## Run tasks
+- **Desktop version** (`x-desktop`) - A full-featured web app for desktop browsers
+- **Mobile version** (`x-mobile`) - A mobile-optimized version of the app
+- **UI Library** (`ui`) - Reusable components shared between desktop and mobile apps
 
-To run the dev server for your app, use:
+## Technologies Used
 
-```sh
-npx nx dev twitter-web
-```
+This project uses:
 
-To create a production bundle:
+- **Next.js** - A React framework for building web applications
+- **React** - A JavaScript library for building user interfaces
+- **TypeScript** - JavaScript with type checking for better code quality
+- **Tailwind CSS** - A utility-first CSS framework for styling
+- **Nx** - A tool for managing monorepos (multiple projects in one codebase)
+- **Storybook** - A tool for building and testing UI components in isolation
 
-```sh
-npx nx build twitter-web
-```
+## Prerequisites
 
-To see all available targets to run for a project, run:
+Before you start, make sure you have these installed on your computer:
 
-```sh
-npx nx show project twitter-web
-```
+- **Node.js** (version 18 or higher) - [Download here](https://nodejs.org/)
+- **npm** (comes with Node.js) - Package manager for JavaScript
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
+To check if you have them installed, open your terminal and run:
 
 ```sh
-npx nx g @nx/next:app demo
+node --version
+npm --version
 ```
 
-To generate a new library, use:
+## Getting Started
+
+### Step 1: Install Dependencies
+
+First, you need to install all the required packages. Open your terminal in this project folder and run:
 
 ```sh
-npx nx g @nx/react:lib mylib
+npm install
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+This will download all the necessary code libraries that the project needs.
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### Step 2: Run the Development Server
 
-## Set up CI!
-
-### Step 1
-
-To connect to Nx Cloud, run the following command:
+To see the application in your browser, run:
 
 ```sh
-npx nx connect
+nx dev x-desktop
 ```
 
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+This will start the desktop version. After a few seconds, you should see a message telling you the app is running (usually at `http://localhost:3000`).
 
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Open that address in your web browser to see the application!
 
-### Step 2
+### Step 3: Stop the Server
 
-Use the following command to configure a CI workflow for your workspace:
+When you're done, press `Ctrl + C` in your terminal to stop the development server.
+
+## Available Commands
+
+Here are some useful commands you can run:
+
+### Run the Desktop App
 
 ```sh
-npx nx g ci-workflow
+nx dev x-desktop
 ```
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Starts the desktop version in development mode. Changes you make will automatically appear in the browser.
 
-## Install Nx Console
+### Run the Mobile App
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+```sh
+nx dev x-mobile
+```
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Starts the mobile version in development mode.
 
-## Useful links
+### Build for Production
 
-Learn more:
+```sh
+nx build x-desktop
+```
 
-- [Learn more about this workspace setup](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Creates an optimized version of the app that's ready to deploy to a web server.
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### View UI Components in Storybook
+
+```sh
+nx storybook ui
+```
+
+Opens Storybook, a tool where you can see and test all the UI components separately.
+
+### Run Tests
+
+```sh
+nx test ui
+```
+
+Runs automated tests to make sure the code works correctly.
+
+## Project Structure
+
+Here's how the project is organized:
+
+```
+twitter-web/
+├── packages/
+│   ├── ui/              # Shared UI components (buttons, inputs, etc.)
+│   ├── x-desktop/       # Desktop web application
+│   └── x-mobile/        # Mobile web application
+├── package.json         # Project configuration and dependencies
+└── README.md           # This file
+```
+
+### What's in each package?
+
+- **`ui`** - Contains reusable components like buttons, forms, and icons that both desktop and mobile apps use
+- **`x-desktop`** - The main desktop application with features like feed, profile, and tweet composition
+- **`x-mobile`** - The mobile version with a touch-friendly interface
+
+## Learning Resources
+
+If you're new to these technologies, here are some helpful resources:
+
+- [Next.js Tutorial](https://nextjs.org/learn) - Learn how to build with Next.js
+- [React Documentation](https://react.dev/) - Official React learning guide
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/) - Learn TypeScript basics
+- [Tailwind CSS Docs](https://tailwindcss.com/docs) - Learn Tailwind CSS
+- [Nx Documentation](https://nx.dev) - Learn about monorepos and Nx
+
+## Need Help?
+
+If you encounter any problems:
+
+1. Make sure all dependencies are installed (`npm install`)
+2. Check that you're using Node.js version 18 or higher
+3. Try deleting `node_modules` folder and running `npm install` again
+4. Check the error messages in your terminal - they usually tell you what's wrong
+
+## Contributing
+
+This is a learning project! Feel free to:
+
+- Add new features
+- Fix bugs
+- Improve the design
+- Experiment with the code
+
+## License
+
+MIT License - feel free to use this project for learning purposes.

@@ -20,5 +20,18 @@
     "clsx": "^2.1.1",
     "next-themes": "^0.4.6",
     "tailwind-merge": "^3.4.0"
+  },
+  "nx": {
+    "targets": {
+      "test": {
+        "executor": "@nx/vitest:test",
+        "outputs": [
+          "{options.reportsDirectory}"
+        ],
+        "options": {
+          "reportsDirectory": "../../coverage/packages/ui"
+        }
+      }
+    }
   }
 }
