@@ -13,9 +13,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-primary-blue border-primary-blue text-white',
-        secondary: 'bg-transparent border-primary-blue text-primary-blue',
-        link: 'bg-transparent border-transparent text-primary-blue font-medium hover:underline h-auto p-0',
+        primary:
+          'bg-primary-blue border-primary-blue text-white hover:opacity-90 active:opacity-80',
+        secondary:
+          'bg-transparent border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white active:opacity-90',
+        link: 'bg-transparent border-transparent text-primary-blue font-medium hover:underline hover:opacity-80 active:opacity-70 h-auto p-0',
       },
       size: {
         small: 'h-[30px] px-3 py-2',
