@@ -48,6 +48,7 @@ export default defineConfig(() => ({
     globals: true,
     environment: 'jsdom',
     include: ['__tests__/**/*.spec.{mjs,cjs,ts,mts,cts,tsx}'],
+    setupFiles: ['./jest-setup.ts'],
     reporters: ['default'],
     coverage: {
       reportsDirectory: './test-output/vitest/coverage',
