@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
-import { cn } from '../lib/utils';
+import { cn } from '~/lib/utils';
 
 function Tabs({
   className,
@@ -26,7 +26,7 @@ function TabsList({
       data-slot="tabs-list"
       className={cn(
         'inline-flex h-12 w-fit items-center justify-center',
-        className,
+        className
       )}
       {...props}
     />
@@ -42,7 +42,7 @@ function TabsTrigger({
       data-slot="tabs-trigger"
       className={cn(
         'data-[state=active]:text-primary-blue hover:bg-dark-2 text-dark-6 inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 font-bold whitespace-nowrap transition-[color,box-shadow]',
-        className,
+        className
       )}
       {...props}
     />

@@ -1,4 +1,4 @@
-import { IconProps } from './types';
+import { IconProps } from '~/icons/types';
 
 export const GlobeIcon: React.FC<IconProps> = ({ className, ...props }) => {
   return (

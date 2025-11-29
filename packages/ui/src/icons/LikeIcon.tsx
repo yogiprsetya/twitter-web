@@ -1,9 +1,6 @@
-import { IconProps } from './types';
+import { IconProps } from '~/icons/types';
 
-export const LikeIcon: React.FC<IconProps> = ({
-  className,
-  ...props
-}) => {
+export const LikeIcon: React.FC<IconProps> = ({ className, ...props }) => {
   return (
     <svg
       width="24"
@@ -43,4 +40,3 @@ export const LikeIconSelected: React.FC<IconProps> = ({
     </svg>
   );
 };
-

@@ -1,9 +1,9 @@
 'use client';
 
 import * as React from 'react';
-import { Input } from './input';
-import { cn } from '../lib/utils';
-import { EyeIcon, EyeOffIcon } from '../icons';
+import { Input } from '~/components/input';
+import { cn } from '~/lib/utils';
+import { EyeIcon, EyeOffIcon } from '~/icons';
 
 interface InputPasswordProps
   extends Omit<React.ComponentProps<'input'>, 'type'> {

@@ -37,7 +37,7 @@ import {
   SearchIcon,
   ShareIcon,
   TopTweetIcon,
-} from '../icons';
+} from '~/icons';
 
 const meta = {
   title: 'Icons',

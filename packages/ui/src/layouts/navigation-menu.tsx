@@ -13,7 +13,7 @@ import {
   ListsIconSelected,
   ProfileIconDefault,
   ProfileIconSelected,
-} from '../icons';
+} from '~/icons';
 
 export const SIDEBAR_MENU = [
   {

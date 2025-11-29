@@ -1,9 +1,6 @@
-import { IconProps } from './types';
+import { IconProps } from '~/icons/types';
 
-export const CommentIcon: React.FC<IconProps> = ({
-  className,
-  ...props
-}) => {
+export const CommentIcon: React.FC<IconProps> = ({ className, ...props }) => {
   return (
     <svg
       width="24"
@@ -21,4 +18,3 @@ export const CommentIcon: React.FC<IconProps> = ({
     </svg>
   );
 };
-

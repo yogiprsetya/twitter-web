@@ -1,6 +1,7 @@
 //@ts-check
 
 const { composePlugins, withNx } = require('@nx/next');
+const path = require('path');
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
@@ -35,6 +36,12 @@ const nextConfig = {
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
+
+    // Add alias for @twitter-web/ui package to resolve ~ alias
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '~': path.resolve(__dirname, '../ui/src'),
+    };
 
     return config;
   },

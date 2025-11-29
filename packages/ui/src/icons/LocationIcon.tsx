@@ -1,9 +1,6 @@
-import { IconProps } from './types';
+import { IconProps } from '~/icons/types';
 
-export const LocationIcon: React.FC<IconProps> = ({
-  className,
-  ...props
-}) => {
+export const LocationIcon: React.FC<IconProps> = ({ className, ...props }) => {
   return (
     <svg
       width="24"
@@ -25,4 +22,3 @@ export const LocationIcon: React.FC<IconProps> = ({
     </svg>
   );
 };
-

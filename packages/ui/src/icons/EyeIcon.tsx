@@ -1,4 +1,4 @@
-import { IconProps } from './types';
+import { IconProps } from '~/icons/types';
 
 export const EyeIcon: React.FC<IconProps> = ({ className, ...props }) => {
   return (
