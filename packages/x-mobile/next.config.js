@@ -1,6 +1,13 @@
 //@ts-check
 
 const { composePlugins, withNx } = require('@nx/next');
+
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === 'development',
+});
 const path = require('path');
 
 /**
@@ -10,41 +17,6 @@ const nextConfig = {
   // Use this to set Nx-specific options
   // See: https://nx.dev/recipes/next/next-config-setup
   nx: {},
-
-  webpack(config) {
-    // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find(
-      (/** @type {{ test: { test: (arg0: string) => any; }; }} */ rule) =>
-        rule.test?.test?.('.svg')
-    );
-
-    config.module.rules.push(
-      // Reapply the existing rule, but only for svg imports ending in ?url
-      {
-        ...fileLoaderRule,
-        test: /\.svg$/i,
-        resourceQuery: /url/, // *.svg?url
-      },
-      // Convert all other *.svg imports to React components
-      {
-        test: /\.svg$/i,
-        issuer: fileLoaderRule.issuer,
-        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
-        use: ['@svgr/webpack'],
-      }
-    );
-
-    // Modify the file loader rule to ignore *.svg, since we have it handled now.
-    fileLoaderRule.exclude = /\.svg$/i;
-
-    // Add alias for @twitter-web/ui package to resolve ~ alias
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '~': path.resolve(__dirname, '../ui/src'),
-    };
-
-    return config;
-  },
 };
 
 const plugins = [
@@ -52,4 +24,54 @@ const plugins = [
   withNx,
 ];
 
-module.exports = composePlugins(...plugins)(nextConfig);
+// Apply plugins first
+const configWithPlugins = composePlugins(...plugins)(nextConfig);
+
+// Apply PWA and ensure SVG webpack config is preserved
+const pwaConfig = withPWA(configWithPlugins);
+
+// Ensure SVG webpack config is applied after PWA modifies the config
+module.exports = {
+  ...pwaConfig,
+  webpack: (config, options) => {
+    // Apply PWA's webpack config first
+    if (pwaConfig.webpack) {
+      config = pwaConfig.webpack(config, options);
+    }
+
+    // Then apply SVG configuration
+    const fileLoaderRule = config.module.rules.find(
+      (/** @type {{ test: { test: (arg0: string) => any; }; }} */ rule) =>
+        rule.test?.test?.('.svg')
+    );
+
+    if (fileLoaderRule) {
+      fileLoaderRule.exclude = /\.svg$/i;
+
+      config.module.rules.push(
+        {
+          ...fileLoaderRule,
+          test: /\.svg$/i,
+          resourceQuery: /url/,
+        },
+        {
+          test: /\.svg$/i,
+          issuer: fileLoaderRule.issuer,
+          resourceQuery: {
+            not: [...(fileLoaderRule.resourceQuery?.not || []), /url/],
+          },
+          use: ['@svgr/webpack'],
+        }
+      );
+    }
+
+    // Ensure aliases are preserved
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '~/public': path.resolve(__dirname, './public'),
+      '~': path.resolve(__dirname, '../ui/src'),
+    };
+
+    return config;
+  },
+};
